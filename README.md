@@ -1,15 +1,22 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Netlify live Website link [click here](https://sweet-swan-a47eb2.netlify.app/)
+
+##
+
+Git hub link of this project code[git code](https://github.com/Billah-Tamim/creative-softwar)
 
 ## Available Scripts
 
-In the project directory, you can run:
+computer folder of this code
+web projects > creative-software>modify first task
 
-### `npm start`
+note: google sign in method dose not work in netlify
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+
+
+
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
