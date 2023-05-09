@@ -1,0 +1,8 @@
+.product-img{
+    height: 250px;
+}
+.details-product{
+    height: 100px;
+    display: block;
+    overflow-y: auto;
+}

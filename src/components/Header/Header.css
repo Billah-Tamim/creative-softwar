@@ -1,0 +1,14 @@
+.link-container{
+    text-decoration: none;
+    color: white;
+}
+.link-container:hover{
+    color: lightpink;
+}
+.log-out{
+    color: lightpink;
+    font-weight: 700;
+}
+.log-out:hover{
+    color: white;
+}
