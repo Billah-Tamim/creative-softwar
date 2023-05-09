@@ -3,9 +3,10 @@ import './Login.css';
 import { AuthContext } from '../../context/UserContext';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
+import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
-    const {logIn} = useContext(AuthContext);
+    const {logIn, googleSignIn} = useContext(AuthContext);
     const navigate = useNavigate();
     let location = useLocation();
     let from = location?.state?.from.pathname || '/products' ;
@@ -21,6 +22,18 @@ const Login = () => {
         .then(result=>{
             const user = result.user;
             form.reset();
+            navigate(from, {replace:true});
+            console.log(user);
+        })
+        .catch(error=>{
+            console.error(error);
+        })
+    }
+
+    const handleGoogle = ()=>{
+        googleSignIn()
+        .then(result=>{
+            const user = result.user;
             navigate(from, {replace:true});
             console.log(user);
         })
@@ -52,14 +65,16 @@ const Login = () => {
                             </div>
                             <a href='/register' className="link link-error">If you don't have an account?</a>
                             <div className="">
-                                <button type='submit' className="btn btn-success">Login</button>
+                                <button type='submit' className="btn btn-success d-block mb-3">Login</button>
+                                <Button onClick={handleGoogle} className='d-flex' variant="outline-success"><FaGoogle className='me-4'></FaGoogle> Login With Google</Button>
                             </div>
                         </div>
                     </div>
                     
                 </form>
-                <Button variant="outline-success">Login With Google</Button>
+                
             </div>
+
         </div>
     );
 };
